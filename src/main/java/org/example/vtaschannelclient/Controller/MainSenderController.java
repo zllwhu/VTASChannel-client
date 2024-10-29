@@ -1,9 +1,9 @@
 package org.example.vtaschannelclient.Controller;
 
-import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,6 +29,9 @@ public class MainSenderController implements Initializable {
     public TableColumn<Account, String> columnAmount;
     public Pagination assetPagination;
     public List<Account> tableData;
+
+    @FXML
+    TextArea resultText;
 
     @Override
     public void initialize(URL url, ResourceBundle resources) {
@@ -85,5 +88,54 @@ public class MainSenderController implements Initializable {
         alert.setContentText("基于可验证定时适配器签名的高效可扩展支付系统 v1.0");
         alert.getDialogPane().getButtonTypes().add(ButtonType.OK);
         alert.showAndWait();
+    }
+
+    @FXML
+    public void refreshList() {
+        List<Account> newTableData = getTableData();
+        tableConfig(newTableData);
+        assetTable.refresh();
+    }
+
+    @FXML
+    public void buttonA11() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a11");
+        resultText.setText(response);
+    }
+
+    @FXML
+    public void buttonA12() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a12");
+        resultText.setText(response);
+    }
+
+    @FXML
+    public void buttonA2() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a2");
+        resultText.setText(response);
+    }
+
+    @FXML
+    public void buttonA3() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a3");
+        resultText.setText(response);
+    }
+
+    @FXML
+    public void buttonA4() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a4");
+        resultText.setText(response);
+    }
+
+    @FXML
+    public void buttonA5() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a5");
+        resultText.setText(response);
+    }
+
+    @FXML
+    public void buttonA6() {
+        String response = HttpClientUtil.doGet("http://localhost:8080/crypto/a6");
+        resultText.setText(response);
     }
 }

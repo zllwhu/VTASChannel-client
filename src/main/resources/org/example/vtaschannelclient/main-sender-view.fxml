@@ -40,20 +40,28 @@
                     </HBox>
                     <HBox prefHeight="120.0" prefWidth="450.0">
                         <VBox prefWidth="225" prefHeight="120.0">
-                            <Button fx:id="button1" focusTraversable="false"
-                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 1
-                                <VBox.margin>
-                                    <Insets left="25.0"/>
-                                </VBox.margin>
-                            </Button>
+                            <HBox prefHeight="30" prefWidth="225">
+                                <Button fx:id="button11" focusTraversable="false"
+                                        prefHeight="30.0" prefWidth="95.0" style="-fx-font-family: 'STSong'" onAction="#buttonA11">密钥协商
+                                    <HBox.margin>
+                                        <Insets left="25.0"/>
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="button12" focusTraversable="false"
+                                        prefHeight="30.0" prefWidth="95.0" style="-fx-font-family: 'STSong'" onAction="#buttonA12">校验密钥
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </Button>
+                            </HBox>
                             <Button fx:id="button2" focusTraversable="false"
-                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 2
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'" onAction="#buttonA2">生成预签名
                                 <VBox.margin>
                                     <Insets left="25.0" top="15.0"/>
                                 </VBox.margin>
                             </Button>
                             <Button fx:id="button3" focusTraversable="false"
-                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 3
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'" onAction="#buttonA3">生成初始状态
                                 <VBox.margin>
                                     <Insets left="25.0" top="15.0"/>
                                 </VBox.margin>
@@ -61,19 +69,19 @@
                         </VBox>
                         <VBox prefWidth="225" prefHeight="120.0">
                             <Button fx:id="button4" focusTraversable="false"
-                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 4
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'" onAction="#buttonA4">广播通道开启
                                 <VBox.margin>
                                     <Insets left="25.0"/>
                                 </VBox.margin>
                             </Button>
                             <Button fx:id="button5" focusTraversable="false"
-                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 5
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'" onAction="#buttonA5">更新通道状态
                                 <VBox.margin>
                                     <Insets left="25.0" top="15.0"/>
                                 </VBox.margin>
                             </Button>
                             <Button fx:id="button6" focusTraversable="false"
-                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 6
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'" onAction="#buttonA6">关闭通道
                                 <VBox.margin>
                                     <Insets left="25.0" top="15.0"/>
                                 </VBox.margin>
@@ -90,7 +98,7 @@
                             </HBox.margin>
                         </Label>
                         <Button fx:id="buttonFresh" focusTraversable="false" prefHeight="30.0" prefWidth="100.0"
-                                style="-fx-font-family: 'STSong'">刷新列表
+                                style="-fx-font-family: 'STSong'" onAction="#refreshList">刷新列表
                             <HBox.margin>
                                 <Insets left="259.0" top="15.0"/>
                             </HBox.margin>
