@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.vtaschannelclient.Controller.MainReceiverController">
+    <ImageView fitHeight="600.0" fitWidth="900.0" xmlns="http://javafx.com/javafx/16"
+               xmlns:fx="http://javafx.com/fxml/1">
+        <Image url="@../../../img_main.png"/>
+    </ImageView>
+    <VBox layoutY="50.0" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16"
+          xmlns:fx="http://javafx.com/fxml/1">
+        <MenuBar prefHeight="28.0" prefWidth="900.0" style="-fx-font-family: 'STSong'" VBox.vgrow="NEVER">
+            <Menu mnemonicParsing="false" text="系统偏好设置">
+                <MenuItem fx:id="menuPreferences" mnemonicParsing="false" onAction="#menuPreferences" text="系统偏好"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="关于系统">
+                <MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#menuAbout" text="关于系统"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="退出系统">
+                <MenuItem fx:id="menuQuit" mnemonicParsing="false" onAction="#menuQuit" text="退出系统"/>
+            </Menu>
+        </MenuBar>
+        <AnchorPane style="-fx-background-color: whitesmoke" VBox.vgrow="ALWAYS">
+            <HBox prefHeight="472.5" prefWidth="900.0">
+                <VBox prefHeight="472.5" prefWidth="450.0">
+                    <HBox prefWidth="450.0" prefHeight="50.0">
+                        <Label prefHeight="20.0">操作选项：
+                            <font>
+                                <Font name="STSong" size="13.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0" top="25.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </HBox>
+                    <HBox prefHeight="120.0" prefWidth="450.0">
+                        <VBox prefWidth="225" prefHeight="120.0">
+                            <Button fx:id="button1" focusTraversable="false"
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 1
+                                <VBox.margin>
+                                    <Insets left="25.0"/>
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="button2" focusTraversable="false"
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 2
+                                <VBox.margin>
+                                    <Insets left="25.0" top="15.0"/>
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="button3" focusTraversable="false"
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 3
+                                <VBox.margin>
+                                    <Insets left="25.0" top="15.0"/>
+                                </VBox.margin>
+                            </Button>
+                        </VBox>
+                        <VBox prefWidth="225" prefHeight="120.0">
+                            <Button fx:id="button4" focusTraversable="false"
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 4
+                                <VBox.margin>
+                                    <Insets left="25.0"/>
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="button5" focusTraversable="false"
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 5
+                                <VBox.margin>
+                                    <Insets left="25.0" top="15.0"/>
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="button6" focusTraversable="false"
+                                    prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: 'STSong'">Button 6
+                                <VBox.margin>
+                                    <Insets left="25.0" top="15.0"/>
+                                </VBox.margin>
+                            </Button>
+                        </VBox>
+                    </HBox>
+                    <HBox prefWidth="450.0" prefHeight="50.0">
+                        <Label prefHeight="20.0">链上账户：
+                            <font>
+                                <Font name="STSong" size="13.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0" top="25.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="buttonFresh" focusTraversable="false" prefHeight="30.0" prefWidth="100.0"
+                                style="-fx-font-family: 'STSong'">刷新列表
+                            <HBox.margin>
+                                <Insets left="259.0" top="15.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </HBox>
+                    <HBox prefHeight="227.5" prefWidth="425.0">
+                        <TableView fx:id="assetTable" prefHeight="227.5" prefWidth="425.0"
+                                   style="-fx-font-family: 'STSong'">
+                            <columns>
+                                <TableColumn fx:id="columnAddress" prefWidth="275.0" style="-fx-alignment: CENTER"
+                                             text="地址"/>
+                                <TableColumn fx:id="columnAmount" prefWidth="150.0" style="-fx-alignment: CENTER"
+                                             text="余额"/>
+                            </columns>
+                        </TableView>
+                        <Pagination fx:id="assetPagination" prefHeight="227.5" prefWidth="425.0"
+                                    style="-fx-page-information-visible: false; -fx-font-family: 'STSong'"/>
+                        <padding>
+                            <Insets left="25.0"/>
+                        </padding>
+                    </HBox>
+                </VBox>
+                <VBox prefHeight="472.5" prefWidth="450.0">
+                    <HBox prefWidth="450.0" prefHeight="50.0">
+                        <Label prefHeight="20.0">状态与结果：
+                            <font>
+                                <Font name="STSong" size="13.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0" top="25.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Label prefHeight="20.0" textFill="RED">您当前处于接收方视图
+                            <font>
+                                <Font name="STSong" size="13.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="190.0" top="25.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </HBox>
+                    <HBox prefWidth="450.0" prefHeight="422.5">
+                        <TextArea fx:id="resultText" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                  prefHeight="397.5" prefWidth="400.0">
+                            <font>
+                                <Font name="STSong" size="13.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </TextArea>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </AnchorPane>
+    </VBox>
+</Pane>
